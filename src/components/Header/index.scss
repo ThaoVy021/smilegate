@@ -1,0 +1,49 @@
+@import "../../App.scss";
+
+.header {
+  background-color: $mainBackgroundColor;
+}
+.custom_header {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  .logo_and_name {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+
+    .name {
+      color: $whiteColor;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+
+    @media (max-width: 1024px) {
+      margin-top: 8px;
+      justify-content: flex-start;
+    }
+
+    button {
+      background-color: $mainBackgroundColor;
+      color: $whiteColor;
+      border: 1px solid $whiteColor;
+
+      &:focus,
+      &:focus-visible {
+        outline: 3px inset $mainColor;
+        border: transparent;
+      }
+    }
+  }
+}
